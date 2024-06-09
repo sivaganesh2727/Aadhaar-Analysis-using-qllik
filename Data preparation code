@@ -1,0 +1,23 @@
+#Aadhar Activated:
+If (generated > 0, 'yes','No')
+
+
+#Age Group:
+If (Age > 60, 'senior',
+If (Age >= 18, 'Major',
+If (Age < 18, 'Minor')))
+
+
+
+
+#Regions:
+
+if (Match(State, 'Maharashtra', 'Gujarat', 'Goa', 'Rajasthan', 'Dadra and Nagar Haveli', 'Daman and Diu', 'Daman', 'Diu', 'Others'), 'Western',
+
+if (Match(State, 'Chhattisgarh', 'Madhya Pradesh'), 'Central',
+
+if(Match (State, ' West Bengal', 'Odisha', 'Jharkhand', 'Bihar' ), 'Eastern',
+ if (Match (State, 'Karnataka', 'Andhra Pradesh', 'Tamil Nadu', 'Telangana', 'Kerala', 'Andaman and Nicobar Islands', 'Puducherry', 'Lakshadweep'), 'Southern',
+ if (Match(State, 'Jammu and Kashmir', 'Punjab', 'Himachal Pradesh', 'Uttarakhand', 'Haryana', 'Uttar Pradesh', 'Delhi', 'Chandigarh'), 'Northern',
+if (Match(State, 'Assam', 'Meghalaya', 'Tripura', 'Nagaland', 'Arunachal Pradesh', 'Sikkim', 'Mizoram', 'Manipur'), 'North-Eastern', 'Other')))))) 
+
